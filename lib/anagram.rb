@@ -10,7 +10,6 @@ class Anagram
     some_words.each_with_index do |word, index|
       if init_word == word.split("").sort
         matches << some_words[index]
-        return matches
       end
     end
     return matches
