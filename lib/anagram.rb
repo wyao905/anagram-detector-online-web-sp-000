@@ -6,5 +6,5 @@ class Anagram
     @word = word
   end
   
-  
+  def matc
 end
