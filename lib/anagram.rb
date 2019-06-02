@@ -5,12 +5,14 @@ class Anagram
   end
   
   def match(some_words)
+    matches = []
     init_word = @word.split("").sort
     some_words.each_with_index do |word, index|
       if init_word == word.split("").sort
-        return [] << {some_words[index]}
+        matches << some_words[index]
+        return matches
       end
     end
-    return []
+    return matches
   end
 end
