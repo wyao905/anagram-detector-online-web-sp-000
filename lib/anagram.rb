@@ -8,7 +8,7 @@ class Anagram
     init_word = @word.split("").sort
     some_words.each_with_index do |word, index|
       if init_word == word.split("").sort
-        return "[#{some_words[index]}]"
+        return [] << {some_words[index]}
       end
     end
     return []
