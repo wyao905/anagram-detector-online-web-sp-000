@@ -6,6 +6,11 @@ class Anagram
   
   def match(some_words)
     init_word = @word.split("").sort
-    some_words.each
+    some_words.each_with_index do |index, word|
+      if init_word == word.split("").sort
+        return some_words[index]
+      end
+    end
+    return []
   end
 end
